@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інтерактивний тренажер: Урок №1 — Робота на ПК</title>
+    <style>
+        :root {
+            --primary: #1b365d;
+            --accent: #008060;
+            --bg: #f4f6f9;
+            --card-bg: #ffffff;
+            --text: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        h1 {
+            color: var(--primary);
+            font-size: 24px;
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 10px;
+        }
+        .meta-info {
+            background: #eef3f8;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .task-section {
+            margin-bottom: 25px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .task-header {
+            background: var(--primary);
+            color: white;
+            padding: 12px 15px;
+            font-weight: 600;
+        }
+        .task-body {
+            padding: 15px;
+            background: #fafbfc;
+        }
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .checklist-item input {
+            margin-right: 12px;
+            margin-top: 4px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        .checklist-item label {
+            cursor: pointer;
+            user-select: none;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: #888888;
+        }
+        .progress-bar {
+            background: #e0e0e0;
+            border-radius: 6px;
+            height: 16px;
+            width: 100%;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            background: var(--accent);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        .status-text {
+            margin-top: 10px;
+            font-weight: 600;
+            text-align: right;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Інтерактивний тренажер: Урок №1</h1>
+    <div class="meta-info">
+        <strong>Професія:</strong> 4115 Секретар керівника (організації, підприємства, установи)<br>
+        <strong>Тема:</strong> Інструктаж за змістом занять і організації робочого місця. Оволодіння навичками роботи на ПК.
+    </div>
+
+    <!-- Завдання 1 -->
+    <div class="task-section">
+        <div class="task-header">Завдання 1. Підготовка робочого місця та запуск комп’ютера</div>
+        <div class="task-body">
+            <div class="checklist-item"><input type="checkbox" id="t1_1"><label for="t1_1">Правильна посадка (постава, відстань 50–70 см до монітора).</label></div>
+            <div class="checklist-item"><input type="checkbox" id="t1_2"><label for="t1_2">Увімкнення системного блока та монітора.</label></div>
+            <div class="checklist-item"><input type="checkbox" id="t1_3"><label for="t1_3">Очікування повного завантаження Windows.</label></div>
+            <div class="checklist-item"><input type="checkbox" id="t1_4"><label for="t1_4">Ідентифікація елементів Робочого стола (Пуск, Панель завдань, Кошик).</label></div>
+        </div>
+    </div>
+
+    <!-- Завдання 2 -->
+    <div class="task-section">
+        <div class="task-header">Завдання 2. Організація Робочого стола</div>
+        <div class="task-body">
+            <div class="checklist-item"><input type="checkbox" id="t2_1"><label for="t2_1">Створено папку «Секретар_[Прізвище]».</label></div>
+            <div class="checklist-item"><input type="checkbox" id="t2_2"><label for="t2_2">Створено підпапки: «Вхідні документи», «Вихідні документи», «Робочі матеріали».</label></div>
+            <div class="checklist-item"><input type="checkbox" id="t2_3"><label for="t2_3">Перейменовано підпапку на «Поточні справи».</label></div>
+        </div>
+    </div>
+
+    <!-- Завдання 3 -->
+    <div class="task-section">
+        <div class="task-header">Завдання 3. Робота з файлами</div>
+        <div class="task-body">
+            <div class="checklist-item"><input type="checkbox" id="t3_1"><label for="t3_1">Відкрито програму Блокнот.</label></div>
+            <div class="checklist-item"><input type="checkbox" id="t3_2"><label for="t3_2">Введено текст: «Сьогодні я розпочав(ла) оволодіння навичками роботи на ПК...»</label></div>
+            <div class="checklist-item"><input type="checkbox" id="t3_3"><label for="t3_3">Збережено файл під назвою «Перший_документ» у папці «Поточні справи».</label></div>
+            <div class="checklist-item"><input type="checkbox" id="t3_4"><label for="t3_4">Скопійовано файл у «Вихідні документи» та перейменовано на «Перший_документ_копія».</label></div>
+        </div>
+    </div>
+
+    <!-- Завдання 4 -->
+    <div class="task-section">
+        <div class="task-header">Завдання 4. Основні операції з об’єктами</div>
+        <div class="task-body">
+            <div class="checklist-item"><input type="checkbox" id="t4_1"><label for="t4_1">Видалено файл «Перший_документ_копія» та відновлено його з Кошика.</label></div>
+            <div class="checklist-item"><input type="checkbox" id="t4_2"><label for="t4_2">Переміщено папку «Вхідні документи» всередину папки «Поточні справи».</label></div>
+        </div>
+    </div>
+
+    <!-- Завдання 5 -->
+    <div class="task-section">
+        <div class="task-header">Завдання 5. Завершення роботи</div>
+        <div class="task-body">
+            <div class="checklist-item"><input type="checkbox" id="t5_1"><label for="t5_1">Закрито всі вікна та програми.</label></div>
+            <div class="checklist-item"><input type="checkbox" id="t5_2"><label for="t5_2">Коректно вимкнено ПК через меню «Пуск».</label></div>
+            <div class="checklist-item"><input type="checkbox" id="t5_3"><label for="t5_3">Наведено лад на робочому місці.</label></div>
+        </div>
+    </div>
+
+    <!-- Прогрес -->
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div class="status-text" id="statusText">Виконано: 0 з 13 завдань (0%)</div>
+</div>
+
+<script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const progressFill = document.getElementById('progressFill');
+    const statusText = document.getElementById('statusText');
+    const total = checkboxes.length;
+
+    checkboxes.forEach(box => {
+        box.addEventListener('change', function() {
+            const label = this.nextElementSibling;
+            if(this.checked) {
+                label.classList.add('completed');
+            } else {
+                label.classList.remove('completed');
+            }
+            updateProgress();
+        });
+    });
+
+    function updateProgress() {
+        const checkedCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
+        const percent = Math.round((checkedCount / total) * 100);
+        progressFill.style.width = percent + '%';
+        statusText.textContent = `Виконано: ${checkedCount} з ${total} завдань (${percent}%)`;
+    }
+</script>
+
+</body>
+</html>
